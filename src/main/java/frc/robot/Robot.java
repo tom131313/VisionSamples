@@ -49,7 +49,7 @@ import frc.robot.vision.VisionContainer;
  * 4. Drive the robot to a specified field position (3-D pose of the robot in the field). This a
  * sort of hybrid of other commands in its utilization of driving to a relative position to a 3-D
  * pose and it is using a single robot pose assuming it's the best pose based on a pair of HUB tags.
- * (activated  by XBox controller Y button
+ * {@link AlignToHUBPairedTagFieldRelativePose3D}(activated  by XBox controller Y button
  * {@link RobotContainer#AlignToHUBPairedTagFieldRelativePose3D()})
  * <p>
  * The variations of these commands all assume a good robot pose and for LL and PV the multi-tag
