@@ -192,7 +192,10 @@ public class AlignToHUBPairedTagFieldRelativePose3D extends Command {
         rotController.setSetpoint(target.getRotation().getZ());
         }
 
-        if (pose.AprilTagId != tagDesiredLeft && pose.AprilTagId != tagDesiredRight) // make sure still looking at a possibly correct tag
+        // make sure still looking at a possibly correct tag.
+        // if the robot pose is correct, it doesn't matter if it's from another tag or odometry.
+        // checking for correct tag might help assure better accuracy being near the correct tag.
+        if (pose.AprilTagId != tagDesiredLeft && pose.AprilTagId != tagDesiredRight)
         {
             System.out.println("Oops! " + pose.AprilTagId + " is not in the correct pair");
             return;
