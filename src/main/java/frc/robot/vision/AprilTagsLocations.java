@@ -72,6 +72,7 @@ public class AprilTagsLocations {
 
         System.out.println(aprilTagFieldLayout.getTags().size() + " Tags on file");
         aprilTagFieldLayout.getTags().forEach(initializeTagPoses);
+        System.out.println("Field size " + aprilTagFieldLayout.getFieldLength() + "x" + aprilTagFieldLayout.getFieldWidth());
     }
 
     private AprilTagsLocations() {
